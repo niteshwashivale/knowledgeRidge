@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Knowledgeridge</title>
+	 <!-- core CSS -->
+    <!--<base href="https://www.knowledgeridge.com/" />-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="css/">
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+ <style>
+ html {
+  scroll-behavior: smooth;
+}
+#faq{
+	margin-bottom: 50px;
+}
+#faq h2{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.accordion .card-header{
+	padding: 5px 12px;
+    background: rgba(0,0,0,.05);
+    border: 1px solid #eae7e7;
+    margin-top: 8px;
+}
+.accordion .card-body{
+	padding: 5px 10px;
+    border: 1px solid #eae7e7;
+    border-top: 0;
+    font-size: 14px;
+}
+.card-header a{
+    margin-left: 10px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+.accordion .card-header:after {
+    font-family: 'FontAwesome';  
+    content: "\f068";
+    float: left; 
+    font-size: 12px;
+}
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f067"; 
+    font-size: 12px;
+}
+.experts-login{
+	margin-bottom: 25px;
+    background: url(images/new-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -10px;
+    padding: 35px 0;
+}
+.experts-login h2{
+	color: #fff;
+	padding: 0 10px;
+}
+.experts-login p{
+	color: #fff;
+    padding: 0px 10px 10px;
+}
+.ar p{
+	    max-width: 700px;
+}
+.arrow{
+    top:-300px;
+}
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (orientation: landscape){
+  	.arrow{
+		top: -150px;
+	}
+
+ }
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+	.arrow{
+		top: -100px;
+	}
+}
+@media only screen 
+        and (min-device-width : 768px) 
+        and (max-device-width : 1024px) 
+        and (orientation : portrait) { 
+    .ar{
+    	top: 15%;
+    }
+    .arrow{
+		top: -100px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.accordion .card-header{
+		padding: 5px 6px;
+	}
+	
+ .arrow {
+    top: -100px;
+}
+ .ar {
+    width: 100% !important;
+    bottom: 350px !important;
+    left: 0 !important;
+    top: 160px !important;
+    margin-left: 0px !important;
+}
+.m-t-70 {
+    margin-top: 40px !important;
+}
+}
+	
+ </style>    
+    
+</head><!--/head-->
+
+<body id="home" class="homepage" ng-controller="expertMain" class="homepage">
+    <ng-view>
+    </ng-view>
+   <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="img-responsive"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="about-us.html">ABOUT US</a></li>
+                       <!-- <li ><a href="clients.html">CLIENTS</a></li>-->
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle color-blue" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CLIENTS</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="professional-services.html">Professional Services</a>
+                                  <a class="dropdown-item" href="investment-management.html">Investment Management</a>
+                                  <a class="dropdown-item" href="corporations.html">Corporations</a>
+                            </div>
+                        </li>
+                        <li ><a href="compliance.html">COMPLIANCE</a></li>
+                        <li><a href="cases.html">CASES</a></li>
+                        <li class="active"><a href="expert-login.html">EXPERTS</a>
+                            
+                        </li>
+                        <li ><a href="contact-us.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <!--<section >
+    <div class="container-fluid">
+            <div class="row">
+            <img src="images/client-bg3.png" class="img-responsive">   
+                 
+            </div>
+            
+        </div>
+     
+       
+    </section><!--/#main-slider-->
+     <section id="main-slider">
+    <video poster="images/expert.jpg"  class="video-js vjs-default-skin" preload="auto" id="bgvid" playsinline="" autoplay muted="" loop >
+        <source src="video/kr/networking-concept-B-2.mp4" type="video/mp4">
+      <!--  <source src="video/KnowledgeRdigeHomepageBanner.ogv" type="video/ogg">-->
+                
+    </video>
+    <div class="col-sm-12 ar">
+    <h2 >Experts</h2>
+    <p>Knowledge, in its actionable form, is a rare resource mined with years of practice and insight. It is a commodity that multiplies in value every time it is shared with the world.</p>
+    </div>
+        <div class="col-sm-12 "><a id="scroll" href="#cases-2"><i class="fa fa-angle-down wow bounceInDown arrow animated" style="visibility: visible; animation-name: bounce; padding-top:50px"></i></a></div> 
+    </section><!--/#main-slider-->
+
+    <section id="cases-2" class="wow fadeIn ">
+    	<div class="experts-login">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-12 col-sm-12 ">
+	                    <h2 style="font-family: 'Montserrat'; font-size:26px">Expert Sign Up - Join our Network</h2>
+	                    <p>At Knowledge Ridge, executives & professionals across industries, come together to share seasoned expertise and help drive solutions to problems of significant business impact. Bringing along their unique backgrounds and multifaceted outlook towards challenges of the modern-day business, the elite team of experts help our clients across the entire chain of the research cycle. They guide our clients right from framing the hypothesis to researching as well as validating the final project delivery.</p>
+	                    <p>Through phone & in-person consultations to longer-term engagements, our experts help in market/industry due diligence, internal & external environment assessment, competition mapping and framing strategies crucial to business decision making.</p>
+	                    <p>If you are an industry expert and believe in the ability of your knowledge & experience to help our clients achieve their research objectives, join the elite network today.</p>
+	                </div>
+	            </div>
+	           </div>
+          </div>
+            <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="p-r-40 sm-p-r-0">                       
+                        <div class="panel" id="contact-panel">
+                            <form role="form" autocomplete="off"  id="contact-form" action="" method="post">
+                                <div class="row">
+                                	<p class="sign-heading">
+                                        Personal contact details
+                                    </p>
+									<!----block1---->
+									<div class="col-md-12 col-sm-12 col-xs-12 no-pad">
+										
+										<!--COL--1-->
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pad-r-15">
+											<div class="col-sm-12 col-xs-12 field">
+													<div class="required">
+														<label class="control-label1" required><span class="asterik">*</span>Prefix:</label>
+														<select class="form-control1 validation-error" required="" name="prefix" id="prefix" tabindex="1">
+															<option value="?" selected="selected"></option>
+															<option label="Mr." value="Mr.">Mr.</option>
+															<option label="Mrs." value="Mrs.">Mrs.</option>
+															<option label="Miss." value="Miss.">Miss.</option>
+															<option label="Dr." value="Dr.">Dr.</option>
+															<option label="Prof." value="Prof.">Prof.</option>
+														</select>
+														
+													</div>
+												</div>
+												<div class="col-sm-12 col-xs-12 field">
+													<div class="required">
+														<label class="control-label1" required><span class="asterik">*</span>First Name:</label>
+														<input type="text" name="last_name" id="last-name" class="form-control1 validation-error" tabindex="2">
+														
+														
+													</div>
+												</div>
+												<div class="col-sm-12 col-xs-12 field">
+													<div>
+														<label class="control-label1">Middle name:</label>
+														<input type="text" name="middle_name" id="middle-name" class="form-control1 validation-error" tabindex="3" >
+														
+														
+													</div>
+												</div>
+												
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required">
+													<label class="control-label1" required><span class="asterik">*</span>Last name:</label>
+													<input type="text"  class="form-control1 validation-error" tabindex="4">
+													
+												</div>
+											</div>
+										</div>
+										<!--./COL-1-->
+										
+										<!--COL-2-->
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pad-l-15 pad-r-15">
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="">
+													<label class="control-label1" required>City:</label>
+													<input type="text"  class="form-control1 validation-error" tabindex="5">
+													
+													
+												</div>
+											</div>
+											
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required">
+													<label class="control-label1" required><span class="asterik">*</span>Country:</label>
+													<select class="form-control1 validation-error" tabindex="6">
+														<option value="India">India</option>
+														<option value="Germany">Germany</option>
+														<option value="England">England</option>
+														<option value="USA">USA</option>
+													</select>
+													
+												</div>
+											</div>
+											
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required">
+													<label class="control-label1" required><span class="asterik">*</span>State:</label>
+													<select class="form-control1 validation-error" tabindex="7">
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+													</select>
+													
+												</div>
+											</div>
+											
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required">
+												<label class="control-label1" required><span class="asterik">*</span>Postal Code:</label>
+												<input type="text"  class="form-control1 validation-error" tabindex="8" >
+												
+												</div>
+											</div>
+										</div>
+										<!--./COL-2-->
+										
+										<!--COL-3-->
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pad-l-15">
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required">
+													<label class="control-label1  width33">Time Zone:</label>
+													<select class="form-control1 validation-error width66 time f-right" tabindex="9"></select>
+													
+												</div>
+											</div>
+											<!--field-->
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required2">
+													<label class="control-label1  required" required2=""><span class="asterik">*</span>Primary Phone:</label>
+													<select class="currency-select pull-left fs-12" tabindex="10" >
+															<option value="Primary Phone">Primary Phone</option>
+															<option value="Work Mobile">Work Mobile</option>
+															<option value="Work Landline">Work Landline</option>
+															<option value="Personal Mobile">Personal Mobile</option>
+															<option value="Personal Landline">Personal Landline</option>
+													</select>
+													<input type="tel" class="form-control1 currency pull-right" tabindex="11" >
+													
+												</div>
+											</div>
+										
+											<!--field-->
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required">
+														<label class="control-label1 " required>Alternate Phone:</label>
+														<input type="tel"  class="form-control1 validation-error" tabindex="12" >
+														
+												</div>
+											</div>
+								
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required">
+													<label class="control-label1" required><span class="asterik">*</span>Email:</label>
+													<input type="text"  class="form-control1 validation-error" tabindex="13" >
+													
+												</div>
+											</div>
+										
+											<div class="col-sm-12 col-xs-12 field">
+												<div class="required">
+													<label class="control-label1">Alternate Email:</label>
+													<input type="text"  class="form-control1 validation-error" tabindex="14" >
+													
+												</div>
+											</div>
+										</div>	
+										<!--./COL-3-->		
+								
+									</div>
+									<!----./block1---->
+
+                                </div>
+                                
+                               
+                                 <div class="row top-10">
+                                 	<p class="sign-heading">Professional Summary</p>
+                                    <div class="col-sm-4 pad-bot">
+											<!--FIELD-->
+											<div class="col-sm-12 col-xs-12 field">
+													<label class="control-label1" required2><span class="asterik">*</span>Key Industry:</label>
+													<select class="form-control1 validation-error" tabindex="15" >
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+													</select>
+													
+											</div>
+											
+											<!--FIELD-->
+											<div class="col-sm-12 col-xs-12 field">
+												   <div>
+												   <label class="control-label1">Sub Industry:</label>
+												   <select class="form-control1 validation-error width66" tabindex="16" >
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+														<option value="Lorem">Lorem</option>
+													</select>
+													
+												   </div>
+											</div>
+											
+											<!--FIELD-->
+											<div class="col-sm-12 col-xs-12 field">
+												<label class="control-label1" required2><span class="asterik">*</span>Rate Type:</label>
+												<select class="form-control1 validation-error" onchange="rateType(this.value)" tabindex="17" >
+													<option value=""></option>
+													<option value="Fixed">Fixed</option>
+													<option value="Hourly">Hourly</option>
+												</select>
+												
+											</div>
+											
+											<!--FIELD-->
+											 <div class="col-sm-12 col-xs-12 field">
+											
+												<label class="control-label1" required2><span class="asterik">*</span><span id="rtype">Hourly Rate:</span></label>
+													
+														<input type="text"  class="form-control1 currency validation-error" tabindex="18" >
+													
+													
+														<select class="currency-select validation-error" tabindex="19" >
+															<option value="Currency">Currency</option>
+															<option value="USD">USD</option>
+															<option value="EUR">EUR</option>
+															<option value="INR">INR</option>
+														</select>
+	
+												
+											</div>
+											
+											<div class="col-sm-12 col-xs-12 field">
+												<p class="text-justify pad10 pay-txt pad-l-8">Knowledge Ridge compensates experts for time spent consulting with a client. Payment is prorated based on duration of consultation.</p>
+
+												<label class="control-label1 attach" required2>Upload attachment:
+												<p class="text-justify pay-txt"><i>(CV, Resume; doc, pdf)<br>max 5Mb</i></p></label>
+												
+												<input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple  tabindex="20" />
+												<label for="file-1"><span>Choose file </span></label>
+                                   
+											</div>
+											
+											
+										
+											
+                                    </div>
+                                    
+
+
+
+
+                                    <div class="col-sm-8 col-xs-12 pad-bot pad-left-10">
+                                    	
+										<!--FIELD-->
+										<div class="col-sm-12 col-xs-12 field">
+											<div class="col-sm-2 col-xs-12 no-pad">
+											<label class="control-label1" required2><span class="asterik">*</span>Biography:</label>
+											</div>
+											<div class="col-sm-10 col-xs-12 no-pad">
+											   <textarea class="form-control1 biogragpy-area validation-error no-margin" placeholder="Please enter your professional summary and areas of expertise."  onkeyup="adjustHeight(this)" tabindex="21"  ></textarea>
+												
+											</div>
+										</div>
+                                        	
+                                    
+                                    </div>
+                                  </div>   
+
+                              
+                                 <div class="row">
+                                 	<p class="sign-heading">Work History</p>
+									
+									<div class="col-md-12 col-sm-12 col-xs-12 holder">
+										
+										<div class="col-md-12 col-sm-12 col-xs-12 e1 no-pad field" id="e1">
+											
+											<div class="col-sm-2 exp-field ">
+												<div class="required2">
+													<label class="control-label2 h20" required><span class="asterik">*</span>Company Name</label>                                                    
+													<input type="text"  class="form-control2 validation-error" tabindex="22" >
+													 
+													 <br>
+                                                    <input type="checkbox" class="position" name="position" id="p1"> Current position
+												</div>
+											</div>
+											
+											<div class="col-sm-10 no-pad">
+												<div class="col-sm-2 exp-field">
+													<div class="required2">
+													<label class="control-label2 h20" required2><span class="asterik">*</span>Company Type</label>
+													<select class="form-control1 width100 validation-error" tabindex="23" >
+                                                        <option value=""></option>
+                                                        <option value="public">Public</option>
+                                                        <option value="private">Private</option>
+                                                    </select>
+                                                    
+													</div>
+												</div>
+												<div class="col-sm-2 exp-field">
+													<div class="required3">
+													<label class="control-label2 h20" required3><span class="middle-asterik">*</span>Job Title</label>
+													<input type="text"  class="form-control2 validation-error" tabindex="24" >
+													
+													</div>
+												</div>
+												<div class="col-sm-2 exp-field">
+													<div class="required3">
+													<label class="control-label2 h20">Start Month</label>
+													<select class="form-control1 width100 validation-error" tabindex="25" >
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                    </select>
+													
+													</div>
+												</div>
+												<div class="col-sm-2 exp-field">
+													<div class="required3">
+													<label class="control-label2 h20" required3><span class="middle-asterik">*</span>Start Year</label>
+													<select class="form-control1 width100 validation-error" tabindex="26" >
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        
+                                                    </select>
+													
+													</div>
+												</div>
+												<div class="col-sm-2 exp-field">
+													<div class="required3">
+													<label class="control-label2 h20" required3>End Month</label>
+													<select class="form-control1 width100 validation-error" tabindex="27" >
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        
+                                                    </select>
+													
+													</div>
+												</div>
+												<div class="col-sm-2 exp-field">
+													<div class="required3  col-sm-10 col-xs-12 pad-zero-bot no-pad">
+													<label class="control-label2 h20"><span class="asterik l0">*</span>End Year</label>
+													
+													<select class="form-control1 width100 validation-error" tabindex="28" >
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        <option value="Lorem">Lorem</option>
+                                                        
+                                                    </select>
+													
+													</div>
+                                                    <div class="col-sm-1  text-center no-pad pull-right">
+                                                    	<label class="control-label2 h20">&nbsp;</label>
+                                                        <i class="fa fa-close add-more close-btn" id="b1" onclick="removeExp(this.id)"></i>
+                                                    </div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-12 col-xs-12 text-left ">
+										<strong style="color:#15aece;"><span onclick="addMore()" class="add-more">Add experience</span></strong>
+									</div>
+									
+                                 </div>
+
+                                <div class="sm-p-t-10 text-center">
+                                	<div class="col-sm-12 col-xs-12  field">
+										<label class="control-label2"><input type="checkbox" > I agree to Knowledge Ridge's <a href="terms-condition.html" target="_blank">Terms and Conditions</a></label>
+                                    </div>
+									<div class="col-sm-12 col-xs-12 field">
+										<button type="submit" class="btn btn-primary font-montserrat all-caps fs-12 ">Submit</button>
+									</div>
+                                   
+                                </div>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#cta-->
+    <section id="faq">
+        <div class="container">
+            <div class="row">
+                <h2>FAQ</h2>
+    <div id="accordion" class="accordion">
+        <div class="card mb-0">
+            <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                <a class="card-title">Why was I reached? </a>
+            </div>
+            <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                If we reach out to you, it is because your expertise is relevant to one or more of our clients. 
+            </div>
+            <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                <a class="card-title">Who do I interact with?  </a>
+            </div>
+            <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                Experts will be interacting with Professional Services Firms, Investment Management Companies and Corporations. 
+            </div>
+            <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <a class="card-title mobile-plus-600">What are the phone consultations about and how long do they last?  </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">Phone consultations typically last an hour and will only be about the subject matter at hand, which we will discuss with you prior to confirming a consultation with client. </div>
+            </div>
+             <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                <a class="card-title mobile-plus-320">How is the consulting arrangement finalized? </a>
+            </div>
+            <div id="collapseFour" class="collapse" data-parent="#accordion">
+                <div class="card-body">Terms & Conditions of participation is accepted by each expert prior to engaging with our clients. These can be found <a href="terms-condition.html" target="_blank">here</a> and can be discussed with your point of contact at Knowledge Ridge. Consultations are arranged at a mutually convenient time. </div>
+            </div>
+             <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                <a class="card-title">What is the standard compensation?</a>
+            </div>
+            <div id="collapseFive" class="collapse" data-parent="#accordion">
+                <div class="card-body">We assign a point of contact to each expert who will be discussing this with you.</div>
+            </div>
+        </div>
+</div>
+            </div>
+        </div>
+
+   </section>
+
+     <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 pad-80">
+                    <img src="images/logo.png" class="img-responsive">
+                </div>
+                <div class="col-sm-7">
+                    <p class="blue footer-p"><a style="color:#8fc7ff" href="mailto:info@knowledgeridge.com" target="_top"><i class="fa fa-envelope"></i> info@knowledgeridge.com </a></p>
+                    <p class="footer-p">
+                    <span class="about-text">HQ: C-21, Liberty Phase II, North Main Road, Koregaon Park, Pune, MH 411001 – India | +91 20 4852 5501</span>
+                    <span class="about-text">Gurugram: 371 P, Third Floor, Golf Course Road, Sector 42, Gurugram, HR 122002 – India | +91 124 239 6468 </span>
+                    <span class="about-text">Houston: 10011 Lakeside Gables Drive, Houston, TX 77065 – USA | +1  713 499 9551</span>    
+                        
+                        <a class="privacy" href="privacy-policy.html">Privacy and Cookie Policy</a>
+                        <p class="grey footer-p">Copyright &copy; 2020. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    <section class="privacy-cta">
+            <div class="container">
+                <div class="row">
+                    <p>We use cookies to improve your experience. <a href="privacy-policy.html">Learn more here</a>.</p>
+                    <span id='close'>x</span>
+                </div>
+            </div>
+    </section>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="../lib/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-resource.min.js"></script>
+    <script type="text/javascript" src="../lib/ui-bootstrap-tpls-2.2.0.min.js"></script>
+    <script type="text/javascript" src="../lib/bootbox.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../lib/toastr.min.js"></script>
+    <script type="text/javascript" src="../lib/moment.js"></script>
+    <script type="text/javascript" src="../lib/moment-timezone-with-data.js"></script>
+    <script type="text/javascript" src="../lib/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-resource.min.js"></script>
+    <script type="text/javascript" src="../lib/ui-bootstrap-tpls-2.2.0.min.js"></script>
+    <script type="text/javascript" src="../lib/bootbox.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../lib/toastr.min.js"></script>
+    <script type="text/javascript" src="../lib/moment.js"></script>
+    <script type="text/javascript" src="../lib/moment-timezone-with-data.js"></script>
+      <script type="text/javascript" src="../assets/plugins/pace/pace.min.js"></script>
+	<script type="text/javascript" src="../pages/js/pages.image.loader.js"></script>
+	<script type="text/javascript" src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/swiper/js/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/velocity/velocity.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/velocity/velocity.ui.js"></script>
+	<script type="text/javascript" src="../assets/plugins/jquery-unveil/jquery.unveil.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../pages/js/pages.frontend.js"></script>
+	<script type="text/javascript" src="../assets/js/custom.js"></script>
+	<script type="text/javascript" src="../assets/js/contact.js"></script>
+	<script type="text/javascript" src="../js/services/httpService.js"></script>
+	<script type="text/javascript" src="../js/services/uploadService.js"></script>
+	<script type="text/javascript" src="../js/services/utilityService.js"></script>
+	<script type="text/javascript" src="../js/directives/directives.js"></script>
+	<script type="text/javascript" src="../js/controllers/expertMain.js"></script>
+	<script type="text/javascript" src="../js/controllers/forgotPassword.js"></script>
+	<script type="text/javascript" src="../js/controllers/login.js"></script>
+	<script type="text/javascript" src="../js/controllers/home.js"></script>
+	<script type="text/javascript" src="../js/controllers/registerExpert.js"></script>
+	<script type="text/javascript" src="../js/controllers/leadTermsAndConditions.js"></script>
+	<script type="text/javascript" src="../js/controllers/expertTermsAndConditions.js"></script>
+	<script type="text/javascript" src="../js/expertApp.js"></script>
+	<!-- <script type="text/javascript" src="../js/app.min.js"></script> -->
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/custom/jquery.js"></script>
+    <script src="js/custom/bootstrap.min.js"></script>
+    <script src="js/custom/owl.carousel.min.js"></script>
+    <script src="js/custom/mousescroll.js"></script>
+    <script src="js/custom/smoothscroll.js"></script>
+    <script src="js/custom/jquery.prettyPhoto.js"></script>
+    <script src="js/custom/jquery.isotope.min.js"></script>
+    <script src="js/custom/jquery.inview.min.js"></script>
+    <script src="js/custom/wow.min.js"></script>
+    <script src="js/custom/main.js"></script>
+    <script src="js/custom/blur.js"></script>
+    <script src="pages/js/moment.js"></script>
+    <script src="pages/js/moment-timezone.js"></script>
+    <script src="pages/js/moment-timezone-with-data.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="../lib/jquery.blockUI.js"></script>
+<script>
+$('.use-cases-quick a').click(function(){
+    $('html, body').animate({
+    	scrollTop: $( $(this).attr('href') ).offset().top    
+    }, 900);
+    return false;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ExpertKRApp">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111639252-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111639252-2');
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Knowledgeridge</title>
+    <!-- core CSS -->
+    <base href="/expert" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main-expert.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="css/">
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <script type="text/javascript" src="../lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-resource.min.js"></script>
+    <script type="text/javascript" src="../lib/ui-bootstrap-tpls-2.2.0.min.js"></script>
+    <script type="text/javascript" src="../lib/bootbox.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../lib/toastr.min.js"></script>
+    <script type="text/javascript" src="../lib/moment.js"></script>
+    <script type="text/javascript" src="../lib/moment-timezone-with-data.js"></script>
+    <style>
+        html {
+         scroll-behavior: smooth;
+       }
+       #faq{
+           margin-bottom: 50px;
+       }
+       #faq h2{
+           text-align: center;
+           margin-bottom: 20px;
+       }
+       .accordion .card-header{
+           padding: 5px 12px;
+           background: rgba(0,0,0,.05);
+           border: 1px solid #eae7e7;
+           margin-top: 8px;
+       }
+       .accordion .card-body{
+           padding: 5px 10px;
+           border: 1px solid #eae7e7;
+           border-top: 0;
+           font-size: 14px;
+       }
+       .card-header a{
+           margin-left: 10px;
+           color: #333;
+           font-size: 14px;
+           font-weight: 400;
+       }
+       .accordion .card-header:after {
+           font-family: 'FontAwesome';  
+           content: "\f068";
+           float: left; 
+           font-size: 12px;
+       }
+       .accordion .card-header.collapsed:after {
+           /* symbol for "collapsed" panels */
+           content: "\f067"; 
+           font-size: 12px;
+       }
+       .experts-login{
+           margin-bottom: 25px;
+           background: url(images/new-bg.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+           margin-top: -10px;
+           padding: 35px 0;
+       }
+       .validation-error{
+  border: 1px solid red ! important;
+}
+.error-message{
+	color:red;
+	 
+}
+       .experts-login h2{
+           color: #fff;
+           padding: 0 10px;
+       }
+       .experts-login p{
+           color: #fff;
+           padding: 0px 10px 10px;
+       }
+       .ar p{
+               max-width: 700px;
+       }
+       .arrow{
+           top:-300px;
+       }
+       @media only screen 
+         and (min-device-width: 1024px) 
+         and (max-device-width: 1366px) 
+         and (-webkit-min-device-pixel-ratio: 2) 
+         and (orientation: landscape){
+             .arrow{
+               top: -150px;
+           }
+       
+        }
+       @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+           .arrow{
+               top: -100px;
+           }
+       }
+       @media only screen 
+               and (min-device-width : 768px) 
+               and (max-device-width : 1024px) 
+               and (orientation : portrait) { 
+           .ar{
+               top: 15%;
+           }
+           .arrow{
+               top: -100px;
+           }
+       }
+           @media only screen and (min-width : 321px) and (max-width : 850px) and (orientation : landscape) {
+           .arrow {
+            top: -100px;
+          }
+
+        }
+       @media only screen and (max-width: 600px) {
+           .accordion .card-header{
+               padding: 5px 6px;
+           }
+           
+        .arrow {
+           top: -100px;
+       }
+        .ar {
+           width: 100% !important;
+           bottom: 350px !important;
+           left: 0 !important;
+           top: 160px !important;
+           margin-left: 0px !important;
+       }
+       .m-t-70 {
+           margin-top: 40px !important;
+       }
+       }
+           
+        </style>    
+</head>
+<!--/head-->
+
+<body ng-controller="expertMain" class="homepage">
+    <ng-view>
+    </ng-view>
+   
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/plugins/pace/pace.min.js"></script>
+	<script type="text/javascript" src="../pages/js/pages.image.loader.js"></script>
+	<script type="text/javascript" src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/swiper/js/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/velocity/velocity.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/velocity/velocity.ui.js"></script>
+	<script type="text/javascript" src="../assets/plugins/jquery-unveil/jquery.unveil.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../pages/js/pages.frontend.js"></script>
+	<script type="text/javascript" src="../assets/js/custom.js"></script>
+	<script type="text/javascript" src="../assets/js/contact.js"></script>
+	<script type="text/javascript" src="../js/services/httpService.js"></script>
+	<script type="text/javascript" src="../js/services/uploadService.js"></script>
+	<script type="text/javascript" src="../js/services/utilityService.js"></script>
+	<script type="text/javascript" src="../js/directives/directives.js"></script>
+	<script type="text/javascript" src="../js/controllers/expertMain.js"></script>
+	<script type="text/javascript" src="../js/controllers/forgotPassword.js"></script>
+	<script type="text/javascript" src="../js/controllers/login.js"></script>
+	<script type="text/javascript" src="../js/controllers/home.js"></script>
+	<script type="text/javascript" src="../js/controllers/registerExpert.js"></script>
+	<script type="text/javascript" src="../js/controllers/leadTermsAndConditions.js"></script>
+	<script type="text/javascript" src="../js/controllers/expertTermsAndConditions.js"></script>
+	<script type="text/javascript" src="../js/expertApp.js"></script>
+	<!-- <script type="text/javascript" src="../js/app.min.js"></script> -->
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/custom/jquery.js"></script>
+    <script src="js/custom/bootstrap.min.js"></script>
+    <script src="js/custom/owl.carousel.min.js"></script>
+    <script src="js/custom/mousescroll.js"></script>
+    <script src="js/custom/smoothscroll.js"></script>
+    <script src="js/custom/jquery.prettyPhoto.js"></script>
+    <script src="js/custom/jquery.isotope.min.js"></script>
+    <script src="js/custom/jquery.inview.min.js"></script>
+    <script src="js/custom/wow.min.js"></script>
+    <script src="js/custom/main.js"></script>
+    <script src="js/custom/blur.js"></script>
+    <script src="pages/js/moment.js"></script>
+    <script src="pages/js/moment-timezone.js"></script>
+    <script src="pages/js/moment-timezone-with-data.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="../lib/jquery.blockUI.js"></script>
+<script>
+$('.use-cases-quick a').click(function(){
+    $('html, body').animate({
+    	scrollTop: $( $(this).attr('href') ).offset().top    
+    }, 900);
+    return false;
+});
+</script>
+
+</body>
+</html>
